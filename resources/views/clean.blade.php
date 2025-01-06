@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="clearport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <title>Notification Modal</title>
+    <title>Cleaner UI</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: white;
+            background-color: #f0f0f0;
             color: #333;
             margin: 0;
             padding: 0;
@@ -65,37 +65,79 @@
             display: block;
             margin-bottom: 5px;
         }
+
+        .card {
+            background-color: white;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+
+        .btn-clear {
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .btn-clear:hover {
+            background-color: #218838;
+        }
+
+        .info {
+            color: #28a745;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <!-- Sticky Header -->
     <div class="header">
         <i class="fas fa-arrow-left back-arrow"></i>
-        <span class="header-text">Not Found</span>
+        <span class="header-text">Page Title</span>
         <i class="fas fa-bell" data-bs-toggle="modal" data-bs-target="#notificationModal" style="cursor: pointer;"></i>
     </div>
 
     <!-- Main Content -->
-    <div class="content">
-     
-     
-     
-     
-<div class="card mx-auto" style="max-width: 600px; margin-top: 50px; text-align: center; border: none; box-shadow: none;">
-    <div class="card-body">
-        <img src="https://img.freepik.com/free-vector/404-error-lost-space-concept-illustration_114360-7911.jpg?w=826&t=st=20241207~exp=20241214~hmac=6dc8f1d582fdb56870c7e2e8a8c11df5fbc9bc531d13ae6ed43ebca0af5ca10b" 
-             alt="404 Image" 
-             style="max-width: 100%; height: auto;">
-        <h1 class="card-title" style="margin-top: 20px; font-size: 36px; color: #343a40;">404 - Page Not Found</h1>
-        <p class="card-text" style="font-size: 18px; color: #6c757d;">Oops! The page you're looking for doesn't exist.</p>
+    <div class="content" style="padding-top: 60px; padding-bottom: 60px;">
+   
+   
+        <div class="card">
+            <h1 class="title">7.8 MB Found</h1>
+            <p class="subtitle">Clean cache and free up space on your device</p>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <p class="mb-0">Clean up unnecessary caches</p>
+                    <span class="info">Cache heavier than 1mb would be cleared</span>
+                </div>
+                <button class="btn-clear">Clear</button>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="mb-0">Clear all pending quotes</p>
+                    <span class="info">20 current pending quotes would be permanently declined and deleted
+                    </span>
+                </div>
+                <button class="btn-clear">clear</button>
+            </div>
+        </div>
     </div>
-</div>
-        
-        
-        
-    </div>
-
-<div style="margin-bottom: 50px;"></div>
 
     <!-- Notification Modal -->
     <div class="modal fade" id="notificationModal" tabindex="-1" aria-labelledby="notificationModalLabel" aria-hidden="true">
@@ -106,13 +148,11 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>left blank</p>
+                    <p>Left blank</p>
                 </div>
             </div>
         </div>
     </div>
-
-
 
     <!-- Sticky Footer -->
     <div class="footer">
